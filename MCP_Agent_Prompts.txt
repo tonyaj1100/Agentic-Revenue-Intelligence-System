@@ -1,0 +1,164 @@
+MCP Agent Orchestration Log
+Project: Agentic Revenue Intelligence & Supply Chain Optimization System
+Environment: Power BI Desktop, Model Context Protocol (MCP) Server
+
+Overview
+This document logs the raw prompt sequences used to orchestrate a localized AI agent via the Model Context Protocol (MCP). The agent was tasked with establishing a direct connection to a live Power BI semantic model to execute schema audits, generate DAX measures, troubleshoot filter contexts, and perform root-cause analysis on supply chain bottlenecks.
+
+Phase 1: Semantic Model Audit & Foundational DAX
+Objective: Map the live database schema to prevent hallucination and generate the core metrics required for analysis.
+
+Prompt 1.1: Schema Inspection & Measure Creation
+
+"You are connected to my Power BI Semantic Model via the MCP. I need to create two new DAX measures, but I need you to use the exact table and column names that exist in my model.
+Step 1: Inspect the Schema
+Look at my model and find the exact table and column names for:
+The table containing payment values (likely related to payments).
+The table containing order status, actual delivery date, and estimated delivery date (likely related to orders).
+Step 2: Write the DAX
+Using the exact schema you just found, write the DAX for these two measures:
+Measure 1: Revenue at Risk. This should calculate the SUM of the payment value, but FILTERED to only include orders where the order_status is "delivered" AND the actual delivery date is greater than the estimated delivery date.
+Measure 2: Late Delivery Rate %. This should be a DIVIDE function: The numerator is the count of orders where the actual delivery date is greater than the estimated delivery date. The denominator is the total count of all orders.
+Output the exact DAX code blocks I need to paste into Power BI, and tell me which tables you pulled the names from."
+
+Prompt 1.2: Advanced Model Diagnostic
+
+"You are an Autonomous Data Architecture Agent connected to my Power BI Semantic Model via the MCP. I need a complete diagnostic of my current model so we can calculate the financial ROI of supply chain inefficiencies.
+Execution Plan:
+Schema Audit: List all the active tables/views in my model (especially looking for tables related to payments, orders, and customers like v_payments or v_orders).
+Measures Audit: Scan my _Key Measures table (or wherever my measures are stored). List the names of all the DAX measures currently created, and output their current actual values (e.g., what is the current Total Revenue number?).
+Data Mapping: Find the exact table and column names for: The payment value/amount, The order status, The actual delivery date, The estimated delivery date.
+DAX Generation: Using the exact schema you found in Step 3, write the DAX code for a new measure called Revenue at Risk... Output the diagnostic report and the exact DAX code block."
+
+Phase 2: Root-Cause Analysis & Financial Reporting
+Objective: Cross-filter the fact tables to isolate the financial impact of logistics failures and draft executive summaries.
+
+Prompt 2.1: Isolating State-Level Bottlenecks
+
+"You are a Senior Data Analytics AI connected to the Olist E-commerce Semantic Model via the Power BI MCP.
+Business Context: The VP of Supply Chain needs to know exactly how much revenue is being lost due to logistical failures, specifically late deliveries.
+Your Task:
+Query the semantic model to calculate the total Revenue at Risk (revenue from orders where delivery date > estimated date).
+Identify the single worst-performing customer_state in terms of Late Delivery Rate %.
+Calculate the exact dollar amount of revenue bleeding from that specific state.
+Analyze the Fact_Reviews table to show the correlation: What is the average review score for on-time orders versus late orders in that state?
+Output: Generate a highly professional, 4-bullet-point executive summary. Detail the financial ROI of fixing this specific logistics bottleneck and suggest an immediate business intervention. Output as a markdown file."
+
+Prompt 2.2: Cross-Referencing Revenue vs. Satisfaction
+
+"You are an Autonomous Business Analyst Agent connected to the Olist Power BI Semantic Model via MCP.
+Query the model to find the total Revenue_Delayed_Orders and compare it against the $13.59M Total Revenue.
+Cross-reference the late deliveries against the Avg Review Score to determine the exact drop in customer satisfaction when an order is late.
+Identify the specific State in the On-Time Delivery by State visual that has the lowest on-time percentage and the highest revenue at risk.
+Draft a highly professional, 3-bullet-point executive summary for the Supply Chain VP. State the total revenue currently bleeding due to freight delays, pinpoint the problem state, and suggest a logistics intervention to recover this ROI. Output as a markdown file."
+
+Prompt 2.3: Final ROI Analysis Validation
+
+"The Revenue at Risk measure is now fixed and evaluating correctly. I need you to perform the final Root Cause and ROI analysis.
+Execution Plan:
+Identify the Bleeding: Query the model to calculate the total Revenue at Risk. Then, group this metric by the customer's state to find the top 3 worst-performing states.
+Prove the Customer Impact: Query the Fact_Reviews table. Calculate the Average Review Score for orders that were delivered on time, and compare it to the Average Review Score for orders that were delivered late.
+The Executive Summary: Act as a Senior Data Analyst. Write a 4-bullet point executive email to the VP of Supply Chain... Output as a professional Markdown file."
+
+Phase 3: Dashboard Architecture & UI Configuration
+Objective: Build the visual application layer with strict adherence to a corporate aesthetic and precise cross-filtering.
+
+Prompt 3.1: Executive Overview Layout (Page 1)
+
+"You are an Elite BI Architect and UI/UX Expert connected to my Power BI Semantic Model via MCP. We are building a Tier-1, highly professional 'AI-Augmented Revenue Intelligence System'. We are starting with Page 1: Executive Overview.
+My visual aesthetic is 'Dark Cinematic Corporate' (Dark grey background, rounded floating cards, clean minimalist visuals).
+Your Task: Guide me step-by-step, providing literal click-by-click UI instructions on where to click in Power BI to build this page.
+Step 1: Verify the Engine (DAX)...
+Step 2: The Canvas & Shell Design (Click-by-Click)...
+Step 3: The Visuals (Drag and Drop Instructions)...
+Output this as a highly structured, easy-to-read, step-by-step guide. Do not skip UI steps; tell me exactly what panes and formatting paint rollers to click."
+
+Prompt 3.2: Logistics & ROI Layout (Page 2)
+
+"You are an Elite BI Architect and UI/UX Expert. We are building Page 2: Logistics & ROI for our Tier-1 Corporate Revenue Intelligence dashboard. This page focuses on the $1.35M Revenue at Risk, the São Paulo bottleneck, and the drop in review scores.
+Setup: I have already duplicated Page 1, so the Dark Cinematic shell... is already in place. We are replacing the visuals.
+Step 1: Verify & Create Logistics DAX...
+Step 2: Update the Top Row KPI Cards...
+Step 3: Build the Bottleneck Chart (Middle Left)...
+Step 4: Build the Customer Impact Chart (Middle Right)...
+Step 5: Build the Offending Sellers Matrix (Bottom)...
+Output this as a flawless, highly structured, click-by-click guide."
+
+Prompt 3.3: Retention & Behavior Layout (Page 3)
+
+"You are an Elite BI Architect (GPT-4o) connected via MCP. We are building Page 3: Customer Retention & Behavior.
+CRITICAL CONSTRAINT: To conserve tokens, output absolutely NO conversational filler. Output ONLY the DAX code blocks and the numbered click-by-click UI instructions.
+Context: My tables are Fact_Orders, Fact_Payments, Fact_Reviews, and Dim_Customer.
+Task 1: The Retention Engine (DAX)... Generate the exact DAX for these 3 measures: Total Unique Customers, Repeat Customers, Repeat Purchase Rate %.
+Task 2: The Review Breakdown (DAX & Calculated Column)...
+Task 3: Top KPI Cards (UI Instructions)...
+Task 4: RFM/Customer Loyalty Chart (Middle Left)...
+Task 5: The Review Impact Chart (Middle Right)...
+Task 6: The Retention Matrix (Bottom)...
+Execute all 6 tasks immediately in a dense, formatted structure."
+
+Phase 4: Data Model Troubleshooting & Connection Debugging
+Objective: Resolve schema errors, filter context failures, and dropped port connections during development.
+
+Prompt 4.1: Schema Error Diagnosis
+
+"I got an error that 'customer_id' does not exist in 'Fact_Orders'. Please scan my entire semantic model and tell me the exact Table Name and Column Name where the unique customer identifier is stored."
+
+Prompt 4.2: Filter Context Failure
+
+"CRITICAL BUG: Filter Context Failure. When I select a value in my 'Product Category' slicer, every single visual on my report page goes blank.
+Task 1: Diagnose the Data Model (Schema Audit). Query my semantic model and analyze the relationships between the table that contains the Product Category field... and the tables that hold my metrics... Provide literal, click-by-click instructions on how to go into the Power BI 'Model View' and fix the exact relationship line causing this issue."
+
+Prompt 4.3: Connection Timeout Recovery
+
+"My Power BI MCP server is running. The queries failed because since this is a new chat, you forgot my exact schema and tried to guess the table names.
+Correction Step:
+Use your MCP tools to query my Power BI semantic model and retrieve the EXACT schema (Table names and Column names).
+Specifically look for the tables containing Orders, Reviews, Products, and Customers. Notice exactly how the 'Delivery Status' column and 'Review Category' columns we created earlier are spelled.
+Once you have the correct, exact table and column names mapped out in your memory, re-run the 'Golden Insight' instructions from my previous prompt using the correct syntax. Do not guess the names this time."
+
+Prompt 4.4: Port Ping Test
+
+"I have restarted the MCP server. Please do a simple ping test. Query my semantic model and just list the names of the Tables you see. Do not write any DAX yet, just tell me if you can see the tables."
+
+Phase 5: Prescriptive Analytics Modeling
+Objective: Build an interactive simulator allowing stakeholders to project the ROI of operational improvements.
+
+Prompt 5.1: The What-If Parameter Generation (Page 4)
+
+"You are an Elite BI Architect (GPT-4o). We are building the final page of my dashboard: Page 4: AI Root-Cause Analysis.
+Design Goal: NO matrices. This page is an interactive 'Prescriptive Analytics' simulator.
+Task 1: Create a What-If Parameter (The Simulator). Give me exact, click-by-click instructions on how to use the 'Modeling' tab to create a New Parameter (Numeric Range)... Name: Supply Chain Improvement %.
+Task 2: The ROI Recovery DAX. Write the exact DAX for a new measure called Projected Revenue Recovered. Logic: Multiply the existing [Revenue at Risk] measure by the new Parameter Value.
+Task 3: The AI Executive Summary...
+Task 4: Visualizing the Recovery...
+Output only the DAX and strict, numbered click-by-click UI instructions."
+
+Prompt 5.2: Final Execution Audit
+
+"Perfect. Now that you have my exact schema mapped out in your memory, execute the following mission to design the final page of my dashboard: Page 4: Prescriptive AI Insights.
+Context: > I have already built three pages: Executive Overview, Logistics & ROI, and Retention & Behavior...
+Your Mission: > Autonomously interrogate my semantic model using ONLY the tables you just found... Find the deepest hidden correlation between logistics failures and customer churn or revenue loss.
+Execution Plan:
+Step 1: The Autonomous Data Audit... Output a brief, data-backed summary.
+Step 2: The Executive Narrative...
+Step 3: The Prescriptive Simulator (UI/UX Blueprint)... Give me the exact DAX for the 'Projected ROI / Revenue Recovered' measure based on your specific Golden Insight. Provide literal, click-by-click formatting instructions to build this layout..."
+
+Phase 6: Technical Interview Preparation
+Objective: Stress-test the architecture and DAX logic against enterprise-level technical interview standards.
+
+Prompt 6.1: Technical Audit Simulation
+
+"You are a highly rigorous Senior Data Engineer and BI Hiring Manager at a top-tier tech company. I am a candidate presenting my completed 4-page Power BI Revenue Intelligence dashboard (based on the Brazilian Olist E-commerce dataset).
+My Dashboard Architecture: Page 1: Executive Overview... Page 2: Logistics & ROI... Page 3: Retention & Behavior... Page 4: Prescriptive AI Insights...
+Your Mission: Scan my entire semantic model, my DAX formulas (including the optimized Repeat Customers measure and Review Category column), and my business narrative. Generate a massive, grueling list of interview questions that a real Hiring Manager would ask me to test if I actually know what I'm doing.
+Structure the questions into these 4 Domains:
+
+Data Modeling & Architecture: Ask hard questions about my Star Schema, relationship direction (Single vs. Both), granularity, and how I joined Fact tables...
+
+DAX & Performance Optimization: Ask technical questions about Row Context vs. Filter Context. Ask why I didn't use the EARLIER() function... and how the VertiPaq engine handles my measures.
+
+Business Acumen & Storytelling: Ask me to defend my metrics... challenge the What-If parameter.
+
+Pipeline & Scalability (Data Engineering): Ask hypothetical questions about how I would scale this. If Olist grew to 10 million rows a day, how would I handle incremental refresh, dirty data, or real-time API streaming?
+Output Requirement: > Generate as many hyper-specific, challenging questions as possible. Underneath each question, provide a brief 'Winning Answer Strategy' telling me exactly how a Senior BI Architect would answer it."
