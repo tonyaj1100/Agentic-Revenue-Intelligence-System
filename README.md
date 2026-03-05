@@ -1,29 +1,35 @@
 # 🚀 Agentic Revenue Intelligence & Supply Chain Optimization System
 
 ## 🎯 The Business Impact
-In a rapidly evolving e-commerce landscape, revenue stagnation and customer dissatisfaction were threatening growth. Managers were blind to the root causes of revenue leakage and customer churn. Enter the Agentic Revenue Intelligence & Supply Chain Optimization System: an autonomous AI agent powered by the Model Context Protocol (MCP). This system identified $7.2M in revenue at risk due to late deliveries and quantified the impact of customer sentiment on churn. By deploying a prescriptive simulator, we projected a recovery of $3.6M in revenue with a 50% supply chain improvement. 
+Most analytics portfolios stop at descriptive reporting—building dashboards that simply tell managers what already happened. I built an **Agentic AI system** to prescribe exactly how to fix the problem and quantify the exact ROI of the solution.
 
-This AI-driven approach eliminated over 15 hours of manual reporting and root-cause analysis weekly, empowering decision-makers to focus on strategic growth rather than firefighting operational inefficiencies.
+By autonomously querying a semantic model of over 100,000 e-commerce orders, this system uncovered a massive, hidden revenue leak: **late deliveries were permanently destroying customer lifetime value.** Instead of spending 15+ hours manually slicing data to find the root cause, I deployed a localized AI Agent via the Model Context Protocol (MCP). The agent identified the logistics bottleneck, proved the exact drop in customer sentiment, and generated a prescriptive simulator to model the financial recovery.
 
 ## 💡 Key Discoveries
-- **Logistics Bottleneck**: $7.2M in revenue at risk due to late deliveries.
-- **Customer Sentiment Impact**: Late deliveries caused a 2.18-point drop in average review scores (2.11 vs. 4.29 for on-time deliveries), directly influencing churn.
-- **Prescriptive ROI**: A 50% improvement in supply chain efficiency is projected to recover $3.6M in revenue.
+* **The Logistics Bottleneck:** Freight delays in high-value categories were actively putting **$7.2M** in lifetime revenue at risk.
+* **The Cost of Churn:** Late deliveries caused a catastrophic **2.18-point drop** in average customer review scores (crashing from 4.29 to 2.11), instantly converting loyal promoters into churned detractors.
+* **The Prescriptive ROI:** By engineering an interactive "What-If" simulator, I mathematically proved that a 50% improvement in logistics SLAs will directly recover **$3.6M** in lost revenue.
 
 ## 🖼️ System Architecture & Dashboard
-![Executive Overview](img_01_Executive_Overview.png)
-*Provides a high-level view of revenue trends and operational risks.*
 
-![Logistics & ROI](img_02_Logistics_and_Revenue_Risk.png)
-*Highlights revenue at risk and the financial impact of logistics delays.*
+### 1. Executive Overview
+![Executive Overview](img_Executive%20Overview.png)
+*Tracks high-level KPIs and sets the baseline for total revenue, growth, and active customers.*
 
-![Retention & Sentiment](img_03_Retention_and_Sentiment.png)
-*Visualizes the correlation between delivery performance and customer sentiment.*
+### 2. Logistics & ROI (Revenue at Risk)
+![Logistics & ROI](img_Logistics%20%26%20ROI.png)
+*Isolates the financial impact of supply chain failures and highlights regional bottlenecks.*
 
-![Prescriptive AI Simulator](img_04_Prescriptive_AI_Simulator.png)
-*Simulates the financial outcomes of operational improvements.*
+### 3. Retention & Customer Sentiment
+![Retention & Sentiment](img_Retension%20%26%20Behaviour.png)
+*Analyzes the direct correlation between delivery performance and Net Promoter Score (Promoters vs. Detractors).*
+
+### 4. Prescriptive AI Simulator
+![AI Simulator](img%20Strategic_ROI_Stimulator.png)
+*An interactive parameter allowing stakeholders to model the exact ROI of supply chain improvements based on the agent's findings.*
 
 ## 🛠️ The Tech Stack (How it was built)
-- **PostgreSQL**: Data pipeline for efficient ETL processes.
-- **Power BI**: Semantic modeling and advanced DAX calculations.
-- **Model Context Protocol (MCP)**: Orchestrating the Agentic AI for autonomous insights.
+* **Data Engineering:** PostgreSQL (Views, Joins, and pipeline architecture to flatten the model for AI ingestion).
+* **Data Visualization & Modeling:** Power BI (Star Schema, Complex DAX, What-If Parameters).
+* **AI Orchestration:** Model Context Protocol (MCP) Agent for autonomous root-cause analysis and DAX generation.
+* **UI/UX:** Custom 'Dark Cinematic' theme designed for executive scannability and alert prioritization.
