@@ -31,6 +31,5 @@ By autonomously querying a semantic model of over 100,000 e-commerce orders, thi
 ## 🛠️ The Tech Stack
 * **Data Engineering**: PostgreSQL (ETL pipeline, view creation, and schema flattening).
 * **Semantic Modeling**: Power BI (Star Schema, Time-Intelligence DAX, What-If Parameters).
-* **AI Orchestration**: Model Context Protocol (MCP) for autonomous schema auditing and insight generation.ualization & Modeling:** Power BI (Star Schema, Complex DAX, What-If Parameters).
-* **AI Orchestration:** Model Context Protocol (MCP) Agent for autonomous root-cause analysis and DAX generation.
-* **UI/UX:** Custom 'Dark Cinematic' theme designed for executive scannability and alert prioritization.
+* **AI Orchestration**: Model Context Protocol (MCP) for autonomous schema auditing and insight generation and for autonomous root-cause analysis and DAX generation.
+  
