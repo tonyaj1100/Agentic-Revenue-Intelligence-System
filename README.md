@@ -25,7 +25,7 @@ By autonomously querying a semantic model of over 100,000 e-commerce orders, thi
 *Analyzes the direct correlation between delivery performance and Net Promoter Score (Promoters vs. Detractors).*
 
 ### 4. Prescriptive AI Simulator
-![AI Simulator](img_Strategic_ROI_Stimulator.png)
+![AI Simulator](img_Strategic%20ROI%20Simulator.png)
 *An interactive parameter allowing stakeholders to model the exact ROI of supply chain improvements based on the agent's findings.*
 
 ## 🛠️ The Tech Stack (How it was built)
